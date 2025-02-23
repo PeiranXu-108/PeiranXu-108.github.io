@@ -1,19 +1,20 @@
-/* Your CSS goes here! */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
 }
 
 .navbar {
-    padding-top:10px;
+    padding-top:30px;
+    padding-left: 30px;
     padding-bottom: 0px;
-    background-color: #0073aa;
 }
 
 .navbar a {
-    color: white;
+    color: gray;
     text-decoration: none;
     font-weight: 900;
+    font-size: larger;
 }
 
 .card {
@@ -37,10 +38,9 @@ h2{
 }
 
 .footer {
-    background-color: #0073aa; 
-    color: white;
+    color: gray;
     text-align: center;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 0 0;
     margin-bottom: 0%;
     width: 100%;
 }
