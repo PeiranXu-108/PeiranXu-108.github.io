@@ -2,6 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    padding: 0 100px 0 100px;
+    
 }
 
 .navbar {
@@ -31,7 +33,6 @@ img{
 }
 
 h2{
-    background-color: #c2c7cf;
     text-align: center;
     padding: 5px;
     font-size: x-large;
@@ -68,6 +69,8 @@ h2{
 
 .project-image img {
     width: 250px;
-    border-radius: 10px;
+    height: 250px;
+    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
