@@ -1,9 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    padding: 0 100px 0 100px;
-    
+    background-color: #f8f9fa;  
 }
 
 .navbar {
@@ -27,10 +25,6 @@ body {
     transform: scale(1.05);
 }
 
-img{
-    width: 300px;
-    padding: 10px;
-}
 
 h2{
     text-align: center;
@@ -46,31 +40,17 @@ h2{
     width: 100%;
 }
 
-.project-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.subtitle {
+    font-size: 16px;
+    color: gray;
 }
 
-.project-text {
-    flex: 1;
-    padding-right: 20px;
+.location, p {
+    font-size: 14px;
+    color: gray;
 }
 
-.project-text ul {
-    padding-left: 20px;
+.fas, .fab {
+    margin-right: 8px; /* 让图标和文字之间有间隔 */
 }
 
-
-.project-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-}
