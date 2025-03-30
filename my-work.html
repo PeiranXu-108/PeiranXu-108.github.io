@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      .image-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .image-container img {
+        transition: 0.3s ease-in-out;
+        display: block;
+      }
+
+      .overlay-text {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        transition: bottom 0.3s ease-in-out;
+      }
+
+      .image-container:hover img {
+        filter: brightness(60%);
+      }
+
+      .image-container:hover .overlay-text {
+        bottom: 0;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -26,71 +57,137 @@
         <div class="container">
           <div class="row g-3">
             <div class="col-md-4 col-sm-6">
-              <img src="images/street.jpeg" alt="Wisconsin State Capital" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="images/street.jpeg" alt="Wisconsin State Capital" class="img-fluid rounded shadow">
+                <div class="overlay-text">Wisconsin State Capital</div>
+              </div>
             </div>
             <div class="col-md-4 col-sm-6">
-              <img src="images/ice-lake.jpeg" alt="Houses and Frozen Lake Mendota" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="images/ice-lake.jpeg" alt="Houses and Frozen Lake Mendota" class="img-fluid rounded shadow">
+                <div class="overlay-text">Houses and Frozen Lake Mendota</div>
+              </div>
             </div>
             <div class="col-md-4 col-sm-6">
-              <img src="images/snow-lake.jpeg" alt="Snowy and icy Lake Mendota" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="images/snow-lake.jpeg" alt="Snowy and icy Lake Mendota" class="img-fluid rounded shadow">
+                <div class="overlay-text">Snowy and icy Lake Mendota</div>
+              </div>
             </div>
             <div class="col-md-4 col-sm-6">
-              <img src="images/street-runner.jpeg" alt="Snowy Street" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="images/street-runner.jpeg" alt="Snowy Street" class="img-fluid rounded shadow">
+                <div class="overlay-text">Snowy Street</div>
+              </div>
             </div>
             <div class="col-md-4 col-sm-6">
-              <img src="images/street-2.jpeg" alt="Wisconsin State Capital" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="images/street-2.jpeg" alt="Wisconsin State Capital" class="img-fluid rounded shadow">
+                <div class="overlay-text">Wisconsin State Capital</div>
+              </div>
             </div>
             <div class="col-md-4 col-sm-6">
-              <img src="images/wisc.jpeg" alt="University of Wisconsin-Madison" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="images/wisc.jpeg" alt="University of Wisconsin-Madison" class="img-fluid rounded shadow">
+                <div class="overlay-text">University of Wisconsin-Madison</div>
+              </div>
             </div>
 
           <div class="col-md-4 col-sm-6">
-            <img src="images/grant_park.JPG" alt="Cloud Gate" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/grant_park.JPG" alt="Cloud Gate" class="img-fluid rounded shadow">
+              <div class="overlay-text">Cloud Gate</div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/lincoln_park.JPG" alt="Chicago skyine from lincoln park" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/lincoln_park.JPG" alt="Chicago skyine from lincoln park" class="img-fluid rounded shadow">
+              <div class="overlay-text">Chicago skyine from lincoln park</div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/skyline.JPG" alt="Chicago skyine from lincoln park" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/skyline.JPG" alt="Chicago skyine from lincoln park" class="img-fluid rounded shadow">
+              <div class="overlay-text">Chicago skyine from lincoln park</div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/skyline_2.JPG" alt="Chicago skyine from lincoln park" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/skyline_2.JPG" alt="Chicago skyine from lincoln park" class="img-fluid rounded shadow">
+              <div class="overlay-text">Chicago skyine from lincoln park</div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/michigan_lake.JPG" alt="Lake Michigan" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/michigan_lake.JPG" alt="Lake Michigan" class="img-fluid rounded shadow">
+              <div class="overlay-text">Lake Michigan</div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/trump_tower.JPG" alt="Trump Tower" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/trump_tower.JPG" alt="Trump Tower" class="img-fluid rounded shadow">
+              <div class="overlay-text">Trump Tower</div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_01_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_01_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_02_daylight.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_02_daylight.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_02_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_02_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_03_daylight.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_03_daylight.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_03_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_03_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_05_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_05_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_07_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_07_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_08_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_08_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_09_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_09_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
           <div class="col-md-4 col-sm-6">
-            <img src="images/xu_peiran_10_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+            <div class="image-container">
+              <img src="images/xu_peiran_10_streetphotography.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text"></div>
+            </div>
           </div>
 
         </div>          </div>
