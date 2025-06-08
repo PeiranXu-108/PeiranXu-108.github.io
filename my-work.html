@@ -189,8 +189,80 @@
               <div class="overlay-text">University Book Store</div>
             </div>
           </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img src="images/NYC.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text">Manhatton</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img src="images/nyc-2.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text">University Book Store</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img src="images/nyc-3.JPG" alt="" class="img-fluid rounded shadow">
+              <div class="overlay-text">Wale Street</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/nyc-4.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">New York Stock Exchange</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/nyc-5.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">Times Square</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/nyc-6.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">Times Square</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/nyc-7.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">Times Square</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/nyc-8.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">Long Island City</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/nyc-9.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">Long Island City</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/dc-1.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">Washington Monument</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/dc-2.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">The Capital, DC</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="image-container">
+              <img data-src="images/sg.JPG" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="img-fluid rounded shadow lazy-img">
+              <div class="overlay-text">Singapore Changqi Airport</div>
+            </div>
+          </div>
 
-        </div>          </div>
+        </div>
 
   
 
@@ -200,6 +272,31 @@
   <footer class="footer">
     <p>© 2025 Ryan's Website. All rights reserved.</p>
   </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll('img.lazy-img');
+    if ('IntersectionObserver' in window) {
+      let observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            let img = entry.target;
+            img.src = img.getAttribute('data-src');
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+          }
+        });
+      });
+      lazyImages.forEach(function (img) {
+        observer.observe(img);
+      });
+    } else {
+      lazyImages.forEach(function (img) {
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+      });
+    }
+  });
+</script>
 </html>
 <style>
   body{
