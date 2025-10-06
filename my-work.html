@@ -273,29 +273,30 @@
     <p>© 2025 Ryan's Website. All rights reserved.</p>
   </footer>
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll('img.lazy-img');
-    if ('IntersectionObserver' in window) {
-      let observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            let img = entry.target;
-            img.src = img.getAttribute('data-src');
-            img.removeAttribute('data-src');
-            observer.unobserve(img);
-          }
-        });
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll('img.lazy-img');
+  if ('IntersectionObserver' in window) {
+    let observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let img = entry.target;
+          img.src = img.getAttribute('data-src');
+          img.removeAttribute('data-src');
+          observer.unobserve(img);
+        }
       });
-      lazyImages.forEach(function (img) {
-        observer.observe(img);
-      });
-    } else {
-      lazyImages.forEach(function (img) {
-        img.src = img.getAttribute('data-src');
-        img.removeAttribute('data-src');
-      });
-    }
-  });
+    });
+    lazyImages.forEach(function (img) {
+      observer.observe(img);
+    });
+  } else {
+    // 不支持 IntersectionObserver 的浏览器，直接加载
+    lazyImages.forEach(function (img) {
+      img.src = img.getAttribute('data-src');
+      img.removeAttribute('data-src');
+    });
+  }
+});
 </script>
 </html>
 <style>
