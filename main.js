@@ -83,8 +83,8 @@ const moon = new THREE.Mesh(
 
 scene.add(moon);
 
-moon.position.z = 30;
-moon.position.setX(-8);
+moon.position.z = -3;
+moon.position.setX(-40);
 moon.position.setY(15);
 
 peiran.position.z = -5;

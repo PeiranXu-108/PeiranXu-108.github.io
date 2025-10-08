@@ -85,10 +85,10 @@ h2{
 
 /* New Section Styles */
 .hero-section {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 60px;
     position: relative;
 }
 
